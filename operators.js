@@ -1,121 +1,58 @@
-/**
- * 1. ASSIGNMENT OPERATORS
- * -----------------------
- */
+// Assignment operators
 let x = 10;
-console.log("Initial x:", x);
 
-x += 5; // x is now 15 (Addition)
-console.log("After x += 5:", x);
+x += 5;
+x -= 3;
+x *= 5;
 
-x -= 3; // x is now 12 (Subtraction)
-console.log("After x -= 3:", x);
+console.log(x)
 
-x *= 2; // x is now 24 (Multiplication)
-console.log("After x *= 2:", x);
+// Arithmetic operators
+let sum = 10  + 5;
 
+let diff = 10 - 4;
 
-/**
- * 2. ARITHMETIC OPERATORS
- * -----------------------
- */
-let sum = 10 + 5;        
-console.log("Sum (10 + 5):", sum);
+// Comparison operatos
+let isEqual = (5 === 8);
+console.log(isEqual)
 
-let difference = 20 - 8; 
-console.log("Difference (20 - 8):", difference);
+let isNotEqual = (5 !== 87);
+console.log(isNotEqual)
 
-let product = 4 * 3;     
-console.log("Product (4 * 3):", product);
-
-let quotient = 100 / 4;  
-console.log("Quotient (100 / 4):", quotient);
-
-let remainder = 10 % 3;  
-console.log("Remainder (10 % 3):", remainder);
+let isGreater = (10 >= 9);
+console.log(isGreater)
 
 
-/**
- * 3. COMPARISON (RELATIONAL) OPERATORS
- * ------------------------------------
- */
-let isSame = (5 === 5);      
-console.log("isSame (5 === 5):", isSame);
-
-let isNotSame = (10 !== 5);   
-console.log("isNotSame (10 !== 5):", isNotSame);
-
-let isGreaterOrEqual = (20 >= 18); 
-console.log("isGreaterOrEqual (20 >= 18):", isGreaterOrEqual);
-
-let isLess = (5 < 3);        
-console.log("isLess (5 < 3):", isLess);
-
-
-/**
- * 4. LOGICAL OPERATORS
- * --------------------
- */
-let bothTrue = (true && true);   
-console.log("bothTrue (true && true):", bothTrue);
-
-let eitherTrue = (true || false); 
-console.log("eitherTrue (true || false):", eitherTrue);
-
-let inverted = !true;             
-console.log("inverted (!true):", inverted);
-
-// Practical logic mock variables
-let age = 20;
-let hasTicket = true;
-let canEnter = (age >= 18 && hasTicket === true);
-console.log("canEnter (age 20, hasTicket true):", canEnter);
-
-// Logical Operators Control Flow
+// Logical Operators
+// AND - It will return true if only both conditions are true
+// OR - it will return true if o ne of he condition is true
 let isSunny = false;
-let isWarm = false;
+let isWarm = false; 
 
-console.log("--- Weather Logic ---");
-// AND
-if (isSunny && isWarm) {
-    console.log("It is a perfect day for a swim!");
-} else {
-    console.log("No swimming ");
-}
-
-// OR
 if (isSunny || isWarm) {
-    console.log("It a good day to for a walk");
+    console.log("We can go swimming")
 } else {
-    console.log("Stay inside, weather is poor.");
+    console.log("No swimming today!")
 }
 
 // NOT
 if (!isWarm) {
-    console.log("You should probably carry a jacket");
+    console.log("You should probably carry your jacket")
+}
+console.log(!isWarm)
+
+
+let canDrive = false;
+let hasLicence = true;
+
+if (canDrive || hasLicence){
+    console.log("You can drive the vehicle")
+} else {
+    console.log("You are not allowed to drive")
 }
 
-console.log("Value of !isWarm:", !isWarm);
+if (!hasLicence) {
+    console.log("Can drive")
+}
 
-
-/**
- * 5. TERNARY OPERATOR
- * -------------------
- * Syntax: condition ? valueIfTrue : valueIfFalse
- */
-console.log("--- Ternary Results ---");
-
-// Example 1: Basic check
-let score = 75;
-let status = (score >= 50) ? "Pass" : "Fail";
-console.log("Score 75 Status:", status);
-
-// Example 2: Toggle
-let isDark = true;
-let mode = (isDark) ? "dark-mode" : "light-mode";
-console.log("UI Mode:", mode);
-
-// Example 3: Calculation
-let isMember = false;
-let discount = (isMember) ? 0.20 : 0.05;
-console.log("Discount percentage:", discount);
+console.log(!hasLicence)
